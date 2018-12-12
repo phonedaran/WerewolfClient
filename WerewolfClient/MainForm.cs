@@ -12,6 +12,10 @@ using CommandEnum = WerewolfClient.WerewolfCommand.CommandEnum;
 using WerewolfAPI.Model;
 using Role = WerewolfAPI.Model.Role;
 
+using System.Collections;
+using System.Text.RegularExpressions;
+
+
 namespace WerewolfClient
 {
     public partial class MainForm : Form, View
@@ -25,10 +29,14 @@ namespace WerewolfClient
         private bool _actionActivated;
         private string _myRole;
         private bool _isDead;
+        private bool EmoShow = true;
         private List<Player> players = null;
+        //Add
+        private bool _isEnd = false;
         public MainForm()
         {
             InitializeComponent();
+
 
             foreach (int i in Enumerable.Range(0, 16))
             {
@@ -46,6 +54,33 @@ namespace WerewolfClient
             _isDead = false;
         }
 
+        Hashtable emotions;
+        void CreateEmotions()
+        {
+            emotions = new Hashtable(6);
+            emotions.Add("[:1]", Properties.Resources.Icon_seer);
+            emotions.Add("[:2]", Properties.Resources.Icon_medium);
+            emotions.Add("[:3]", Properties.Resources.Icon_jailer);
+            emotions.Add("[:4]", Properties.Resources.Icon_serial_killer);
+            emotions.Add("[:5]", Properties.Resources.Icon_werewolf);
+            emotions.Add("[:6]", Properties.Resources.Icon_alpha_werewolf);
+        }
+
+        void AddEmotions()
+        {
+            foreach (string emote in emotions.Keys)
+            {
+                while (TbChatBox.Text.Contains(emote))
+                {
+                    int ind = TbChatBox.Text.IndexOf(emote);
+                    TbChatBox.Select(ind, emote.Length);
+                    Clipboard.SetImage((Image)emotions[emote]);
+                    TbChatBox.Paste();
+                    Clipboard.Clear();
+                }
+            }
+        }
+
         private void OnTimerEvent(object sender, EventArgs e)
         {
             WerewolfCommand wcmd = new WerewolfCommand();
@@ -56,6 +91,7 @@ namespace WerewolfClient
         public void AddChatMessage(string str)
         {
             TbChatBox.AppendText(str + Environment.NewLine);
+
         }
 
         public void EnableButton(Button btn, bool state)
@@ -69,6 +105,7 @@ namespace WerewolfClient
             foreach (Player player in wm.Players)
             {
                 Controls["GBPlayers"].Controls["BtnPlayer" + i].Text = player.Name;
+
                 if (player.Name == wm.Player.Name || player.Status != Player.StatusEnum.Alive)
                 {
                     // FIXME, need to optimize this
@@ -139,14 +176,24 @@ namespace WerewolfClient
                 i++;
             }
         }
+
+
+
         public void Notify(Model m)
         {
+            CreateEmotions();
+            AddEmotions();
+
+            //GameEndNow();
+
             if (m is WerewolfModel)
             {
                 WerewolfModel wm = (WerewolfModel)m;
+
                 switch (wm.Event)
                 {
                     case EventEnum.JoinGame:
+
                         if (wm.EventPayloads["Success"] == WerewolfModel.TRUE)
                         {
                             BtnJoin.Visible = false;
@@ -159,16 +206,27 @@ namespace WerewolfClient
                         {
                             MessageBox.Show("You can't join the game, please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
+                        Emo_hide();
                         break;
                     case EventEnum.GameStopped:
                         AddChatMessage("Game is finished, outcome is " + wm.EventPayloads["Game.Outcome"]);
+                        _isEnd = true;
+                        if (_isEnd)
+                        {
+                            GameOver n = new GameOver();
+                            n.Show();
+                        }
                         _updateTimer.Enabled = false;
                         break;
+
                     case EventEnum.GameStarted:
                         players = wm.Players;
                         _myRole = wm.EventPayloads["Player.Role.Name"];
                         AddChatMessage("Your role is " + _myRole + ".");
                         _currentPeriod = Game.PeriodEnum.Night;
+
+                        NightTime();
+
                         EnableButton(BtnAction, true);
                         switch (_myRole)
                         {
@@ -212,11 +270,15 @@ namespace WerewolfClient
                         UpdateAvatar(wm);
                         break;
                     case EventEnum.SwitchToDayTime:
+                        //รูปตอนเช้า
+                        DayTime();
                         AddChatMessage("Switch to day time of day #" + wm.EventPayloads["Game.Current.Day"] + ".");
                         _currentPeriod = Game.PeriodEnum.Day;
                         LBPeriod.Text = "Day time of";
                         break;
                     case EventEnum.SwitchToNightTime:
+                        //รูปตอนมืด
+                        NightTime();
                         AddChatMessage("Switch to night time of day #" + wm.EventPayloads["Game.Current.Day"] + ".");
                         _currentPeriod = Game.PeriodEnum.Night;
                         LBPeriod.Text = "Night time of";
@@ -355,7 +417,7 @@ namespace WerewolfClient
         private void BtnPlayerX_Click(object sender, EventArgs e)
         {
             Button btnPlayer = (Button)sender;
-            int index = (int) btnPlayer.Tag;
+            int index = (int)btnPlayer.Tag;
             if (players == null)
             {
                 // Nothing to do here;
@@ -398,6 +460,106 @@ namespace WerewolfClient
                 TbChatInput.Text = "";
                 controller.ActionPerformed(wcmd);
             }
+        }
+
+        private void DayTime()
+        {
+            Emo_hide();
+            BtnPlayer0.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer1.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer2.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer3.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer4.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer5.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer6.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer7.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer8.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer9.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer10.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer11.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer12.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer13.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer14.BackgroundImage = Properties.Resources.Day_time;
+            BtnPlayer15.BackgroundImage = Properties.Resources.Day_time;
+        }
+
+        private void NightTime()
+        {
+            Emo_hide();
+            BtnPlayer0.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer1.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer2.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer3.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer4.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer5.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer6.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer7.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer8.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer9.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer10.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer11.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer12.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer13.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer14.BackgroundImage = Properties.Resources.Night_time;
+            BtnPlayer15.BackgroundImage = Properties.Resources.Night_time;
+        }
+
+        private void Emo_Click(object sender, EventArgs e)
+        {
+            TbChatInput.Text += ((Button)sender).Text;
+            WerewolfCommand wcmd = new WerewolfCommand();
+            wcmd.Action = CommandEnum.Chat;
+            wcmd.Payloads = new Dictionary<string, string>() { { "Message", TbChatInput.Text } };
+            TbChatInput.Text = "";
+            controller.ActionPerformed(wcmd);
+            Emo_hide();
+        }
+
+        private void Emo_hide()
+        {
+            button1.Hide();
+            button2.Hide();
+            button3.Hide();
+            button4.Hide();
+            button5.Hide();
+            button6.Hide();
+            EmoShow = false;
+        }
+
+        private void Emo_Show()
+        {
+            button1.Show();
+            button2.Show();
+            button3.Show();
+            button4.Show();
+            button5.Show();
+            button6.Show();
+            EmoShow = true;
+
+        }
+
+        private void Emo_hide_show(object sender, EventArgs e)
+        {
+            if (EmoShow == true)
+            {
+                Emo_hide();
+            }
+            else
+            {
+                Emo_Show();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {       
+            //TEST BUTTON
+            _isEnd = true;
+            if (_isEnd)
+            {
+                GameOver n = new GameOver();
+                n.Show();
+            }
+            _updateTimer.Enabled = false;
         }
     }
 }
