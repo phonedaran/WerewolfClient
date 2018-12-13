@@ -73,7 +73,8 @@ namespace WerewolfClient
         public const string ROLE_FOOL = "Fool";
         public const string ROLE_HEAD_HUNTER = "Head Hunter";
         public const string ROLE_SERIAL_KILLER = "Serial Killer";
-
+        //เพิ่มชาวบ้านมา
+        public const string ROLE_VILLAGER = "Villager";
 
         public const string ROLE_GUNNER = "Gunner";
 

@@ -75,6 +75,8 @@ namespace WerewolfClient
 
         public void button1_Click(object sender, EventArgs e)
         {
+            //TEST BUTTON
+
             StartMenu m = new StartMenu();
             m.Show();
             //this.Hide();

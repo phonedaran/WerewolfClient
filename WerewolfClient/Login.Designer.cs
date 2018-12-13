@@ -89,10 +89,10 @@
             // BtnSignIn
             // 
             this.BtnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSignIn.Location = new System.Drawing.Point(331, 303);
+            this.BtnSignIn.Location = new System.Drawing.Point(374, 303);
             this.BtnSignIn.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSignIn.Name = "BtnSignIn";
-            this.BtnSignIn.Size = new System.Drawing.Size(125, 55);
+            this.BtnSignIn.Size = new System.Drawing.Size(165, 55);
             this.BtnSignIn.TabIndex = 4;
             this.BtnSignIn.Text = "Sign In";
             this.BtnSignIn.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.BtnSignUp.Location = new System.Drawing.Point(176, 303);
             this.BtnSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSignUp.Name = "BtnSignUp";
-            this.BtnSignUp.Size = new System.Drawing.Size(125, 55);
+            this.BtnSignUp.Size = new System.Drawing.Size(165, 55);
             this.BtnSignUp.TabIndex = 5;
             this.BtnSignUp.Text = "Sign Up";
             this.BtnSignUp.UseVisualStyleBackColor = true;

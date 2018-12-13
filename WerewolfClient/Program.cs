@@ -20,6 +20,7 @@ namespace WerewolfClient
             MainForm mMainForm = new MainForm();
             mMainForm.Visible = false;
             Login mLogin = new Login(mMainForm);
+            StartMenu mStartMenu = new StartMenu();
             WerewolfController mControler =  WerewolfController.GetInstance();
             WerewolfModel mModel = new WerewolfModel();
 
@@ -34,6 +35,8 @@ namespace WerewolfClient
             mModel.AttachObserver(mLogin);
             mModel.AttachObserver(mMainForm);
 
+
+            //เลือกหน้ารันตรงนี้
             Application.Run(mLogin);
         }
     }

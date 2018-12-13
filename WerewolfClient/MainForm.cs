@@ -13,7 +13,6 @@ using WerewolfAPI.Model;
 using Role = WerewolfAPI.Model.Role;
 
 using System.Collections;
-using System.Text.RegularExpressions;
 
 
 namespace WerewolfClient
@@ -30,14 +29,14 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private bool EmoShow = true;
-        private List<Player> players = null;
+        public List<Player> players = null;
         //Add
         private bool _isEnd = false;
         public MainForm()
         {
             InitializeComponent();
 
-
+            Emo_hide();
             foreach (int i in Enumerable.Range(0, 16))
             {
                 this.Controls["GBPlayers"].Controls["BtnPlayer" + i].Click += new System.EventHandler(this.BtnPlayerX_Click);
@@ -210,12 +209,6 @@ namespace WerewolfClient
                         break;
                     case EventEnum.GameStopped:
                         AddChatMessage("Game is finished, outcome is " + wm.EventPayloads["Game.Outcome"]);
-                        _isEnd = true;
-                        if (_isEnd)
-                        {
-                            GameOver n = new GameOver();
-                            n.Show();
-                        }
                         _updateTimer.Enabled = false;
                         break;
 
