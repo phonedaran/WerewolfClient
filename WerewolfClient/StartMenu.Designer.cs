@@ -35,18 +35,18 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button1.Location = new System.Drawing.Point(338, 344);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 67);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Close";
+            this.button1.Text = "Exit";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.StartMenu_Close);
+            this.button1.Click += new System.EventHandler(this.StartMenu_Exit);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button2.Location = new System.Drawing.Point(275, 271);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 67);
@@ -57,7 +57,7 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button3.Location = new System.Drawing.Point(413, 271);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(132, 67);

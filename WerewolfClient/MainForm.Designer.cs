@@ -361,6 +361,7 @@
             // GBChat
             // 
             this.GBChat.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.GBChat.Controls.Add(this.button8);
             this.GBChat.Controls.Add(this.button1);
             this.GBChat.Controls.Add(this.button5);
             this.GBChat.Controls.Add(this.button4);
@@ -493,7 +494,7 @@
             this.button7.BackColor = System.Drawing.Color.White;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Location = new System.Drawing.Point(459, 512);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(60, 32);
             this.button7.TabIndex = 11;
@@ -651,11 +652,11 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(531, 683);
+            this.button8.Location = new System.Drawing.Point(422, 18);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(50, 36);
+            this.button8.Size = new System.Drawing.Size(106, 51);
             this.button8.TabIndex = 9;
-            this.button8.Text = "End";
+            this.button8.Text = "End(เอามาลอง เด้งหน้าจบ)";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
@@ -665,7 +666,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1179, 731);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.GBStatus);
             this.Controls.Add(this.GBAction);
             this.Controls.Add(this.GBChat);

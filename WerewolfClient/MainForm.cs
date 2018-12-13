@@ -28,10 +28,12 @@ namespace WerewolfClient
         private bool _actionActivated;
         private string _myRole;
         private bool _isDead;
-        private bool EmoShow = true;
         public List<Player> players = null;
         //Add
         private bool _isEnd = false;
+        private bool EmoShow = true;
+        private int BulletCount = 0;
+
         public MainForm()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace WerewolfClient
         Hashtable emotions;
         void CreateEmotions()
         {
+            //Hash รูป
             emotions = new Hashtable(6);
             emotions.Add("[:1]", Properties.Resources.Icon_seer);
             emotions.Add("[:2]", Properties.Resources.Icon_medium);
@@ -67,6 +70,7 @@ namespace WerewolfClient
 
         void AddEmotions()
         {
+            //ตัวสร้างรูปในแชท
             foreach (string emote in emotions.Keys)
             {
                 while (TbChatBox.Text.Contains(emote))
@@ -183,8 +187,6 @@ namespace WerewolfClient
             CreateEmotions();
             AddEmotions();
 
-            //GameEndNow();
-
             if (m is WerewolfModel)
             {
                 WerewolfModel wm = (WerewolfModel)m;
@@ -227,6 +229,16 @@ namespace WerewolfClient
                                 BtnAction.Text = WerewolfModel.ACTION_HOLYWATER;
                                 break;
                             case WerewolfModel.ROLE_GUNNER:
+                                //เพิ่มจำกัดการยิง ยัTEST <<< ใช้ไม่ได้ตรงนี้แค่เปลี่ยนตัวTextปุ่มตอนแรก
+                                if(_currentPeriod == Game.PeriodEnum.Day)
+                                {
+                                    if(BulletCount >= 2)
+                                    {
+                                        break;
+                                    }
+                                }
+                                BulletCount++;
+                                
                                 BtnAction.Text = WerewolfModel.ACTION_SHOOT;
                                 break;
                             case WerewolfModel.ROLE_JAILER:

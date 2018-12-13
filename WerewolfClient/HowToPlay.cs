@@ -21,14 +21,15 @@ namespace WerewolfClient
         }
 
         private void HTP_Close(object sender, EventArgs e)
-        {
-            StartMenu m = new StartMenu();
-            m.Show();
+        {   
+            //ตอนนี้ไม่ได้ใช้
+          
             this.Close();
         }
 
         private void HTP_Next(object sender, EventArgs e)
         {
+            //เพิ่มรูปตรงตามเลขได้เลย
             HTPstate++;
             if (HTPstate >= 2) BtnBack.Show();
             switch (HTPstate)
@@ -41,6 +42,19 @@ namespace WerewolfClient
                     break;
                 case 4:
                     this.BackgroundImage = Properties.Resources.Icon_alpha_werewolf;
+                    BtnNext.Hide();
+                    break;
+                case 5:
+                    this.BackgroundImage = Properties.Resources.Day_time;
+                    break;
+                case 6:
+                    this.BackgroundImage = Properties.Resources.Day_time;
+                    break;
+                case 7:
+                    this.BackgroundImage = Properties.Resources.Day_time;
+                    break;
+                case 8:
+                    this.BackgroundImage = Properties.Resources.Day_time;
                     BtnNext.Hide();
                     break;
             }
@@ -60,6 +74,18 @@ namespace WerewolfClient
                     this.BackgroundImage = Properties.Resources.Night_time;
                     break;
                 case 3:
+                    this.BackgroundImage = Properties.Resources.Day_time;
+                    break;
+                case 4:
+                    this.BackgroundImage = Properties.Resources.Day_time;
+                    break;
+                case 5:
+                    this.BackgroundImage = Properties.Resources.Day_time;
+                    break;
+                case 6:
+                    this.BackgroundImage = Properties.Resources.Day_time;
+                    break;
+                case 7:
                     this.BackgroundImage = Properties.Resources.Day_time;
                     break;
             }

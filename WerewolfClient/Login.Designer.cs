@@ -112,8 +112,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(232, 15);
+            this.pictureBox1.Image = global::WerewolfClient.Properties.Resources.Icon_alpha_werewolf;
+            this.pictureBox1.Location = new System.Drawing.Point(235, 6);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 114);
@@ -144,11 +144,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(32, 26);
+            this.button1.Location = new System.Drawing.Point(33, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 62);
             this.button1.TabIndex = 9;
-            this.button1.Text = "TEST";
+            this.button1.Text = "TEST(ลองเข้าไปหน้าเล่น แต่จะไม่มีข้อมูล ID Login)";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

@@ -323,7 +323,6 @@ namespace WerewolfClient
                     {
                         Console.WriteLine(ex.ToString());
                     }
-
                 }
             }
         }

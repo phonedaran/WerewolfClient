@@ -13,28 +13,30 @@ namespace WerewolfClient
     public partial class StartMenu : Form
     {
 
-        public StartMenu()
+        private Form _Login;
+        public StartMenu(Form m)
         {
             InitializeComponent();
+            _Login = m;
         }
 
-        private void StartMenu_Close(object sender, EventArgs e)
+        private void StartMenu_Exit(object sender, EventArgs e)
         {
-            this.Hide();
+            Application.Exit();
         }
 
         private void BtnHTP_Click(object sender, EventArgs e)
         {
             HowToPlay m = new HowToPlay();
             m.Show();
-            this.Hide();
         }
 
         private void BtnStart_Click(object sender, EventArgs e)
         {
-            MainForm m = new MainForm();
-            m.Show();
-            this.Close();
+            //MainForm m = new MainForm();
+            //m.Show();
+            _Login.Visible = true;
+            this.Visible = false;
         }
     }
 }
