@@ -78,6 +78,11 @@
     <Compile Include="Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,14 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,9 +132,29 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Night_Time.jpg" />
+    <None Include="Resources\RIP2.png" />
+    <None Include="Resources\ST11.png" />
+    <None Include="Resources\ST9.png" />
+    <None Include="Resources\ST12.png" />
+    <None Include="Resources\ST10.png" />
+    <None Include="Resources\ST8.png" />
+    <None Include="Resources\ST7.png" />
+    <None Include="Resources\ST6.png" />
+    <None Include="Resources\ST5.png" />
+    <None Include="Resources\ST4.png" />
+    <None Include="Resources\ST3.png" />
+    <None Include="Resources\ST2.png" />
+    <None Include="Resources\ST1.png" />
+    <None Include="Resources\login.png" />
     <None Include="Resources\RIP.jpg" />
-    <None Include="Resources\Night_time.png" />
-    <None Include="Resources\Day_time.png" />
+    <None Include="Resources\wolf_icon.png" />
+    <None Include="Resources\StartMenu.jpg" />
+    <None Include="Resources\HTP3.png" />
+    <None Include="Resources\HTP4.png" />
+    <None Include="Resources\HTP2.png" />
+    <None Include="Resources\HTP1.png" />
+    <None Include="Resources\Day_Time.jpg" />
     <Content Include="Resources\Icon_alpha_werewolf.png" />
     <Content Include="Resources\Icon_aura_seer.png" />
     <Content Include="Resources\Icon_bodyguard.png" />

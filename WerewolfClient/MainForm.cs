@@ -61,13 +61,19 @@ namespace WerewolfClient
         void CreateEmotions()
         {
             //Hash รูป
-            emotions = new Hashtable(6);
-            emotions.Add("[:1]", Properties.Resources.Icon_seer);
-            emotions.Add("[:2]", Properties.Resources.Icon_medium);
-            emotions.Add("[:3]", Properties.Resources.Icon_jailer);
-            emotions.Add("[:4]", Properties.Resources.Icon_serial_killer);
-            emotions.Add("[:5]", Properties.Resources.Icon_werewolf);
-            emotions.Add("[:6]", Properties.Resources.Icon_alpha_werewolf);
+            emotions = new Hashtable(12);
+            emotions.Add("[:1]", Properties.Resources.ST1);
+            emotions.Add("[:2]", Properties.Resources.ST2);
+            emotions.Add("[:3]", Properties.Resources.ST3);
+            emotions.Add("[:4]", Properties.Resources.ST4);
+            emotions.Add("[:5]", Properties.Resources.ST5);
+            emotions.Add("[:6]", Properties.Resources.ST6);
+            emotions.Add("[:7]", Properties.Resources.ST7);
+            emotions.Add("[:8]", Properties.Resources.ST8);
+            emotions.Add("[:9]", Properties.Resources.ST9);
+            emotions.Add("[:10]", Properties.Resources.ST10);
+            emotions.Add("[:11]", Properties.Resources.ST11);
+            emotions.Add("[:12]", Properties.Resources.ST12);
         }
 
         void AddEmotions()
@@ -180,17 +186,18 @@ namespace WerewolfClient
                     ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                 }
                 //เปลี่ยนรูปตอนตาย
+                
                 if (player.Status == Player.StatusEnum.Votedead)
-                    img = Properties.Resources.RIP;
+                    img = Properties.Resources.RIP2;
                 if (player.Status == Player.StatusEnum.Shotdead)
-                    img = Properties.Resources.RIP;
+                    img = Properties.Resources.RIP2;
                 if (player.Status == Player.StatusEnum.Holydead)
-                    img = Properties.Resources.RIP;
+                    img = Properties.Resources.RIP2;
                 if (player.Status == Player.StatusEnum.Jaildead)
-                    img = Properties.Resources.RIP;
+                    img = Properties.Resources.RIP2;
                 if (player.Status == Player.StatusEnum.Killdead)
-                    img = Properties.Resources.RIP;
-
+                    img = Properties.Resources.RIP2;
+                    
                 ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                 i++;
             }
@@ -487,44 +494,14 @@ namespace WerewolfClient
 
         private void DayTime()
         {
+            this.BackgroundImage = Properties.Resources.Day_Time;
             Emo_hide();
-            BtnPlayer0.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer1.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer2.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer3.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer4.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer5.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer6.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer7.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer8.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer9.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer10.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer11.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer12.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer13.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer14.BackgroundImage = Properties.Resources.Day_time;
-            BtnPlayer15.BackgroundImage = Properties.Resources.Day_time;
         }
 
         private void NightTime()
         {
+            this.BackgroundImage = Properties.Resources.Night_Time;
             Emo_hide();
-            BtnPlayer0.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer1.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer2.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer3.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer4.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer5.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer6.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer7.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer8.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer9.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer10.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer11.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer12.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer13.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer14.BackgroundImage = Properties.Resources.Night_time;
-            BtnPlayer15.BackgroundImage = Properties.Resources.Night_time;
         }
 
         private void Emo_Click(object sender, EventArgs e)
@@ -546,6 +523,12 @@ namespace WerewolfClient
             button4.Hide();
             button5.Hide();
             button6.Hide();
+            button9.Hide();
+            button10.Hide();
+            button11.Hide();
+            button12.Hide();
+            button13.Hide();
+            button14.Hide();
             EmoShow = false;
         }
 
@@ -557,6 +540,12 @@ namespace WerewolfClient
             button4.Show();
             button5.Show();
             button6.Show();
+            button9.Show();
+            button10.Show();
+            button11.Show();
+            button12.Show();
+            button13.Show();
+            button14.Show();
             EmoShow = true;
 
         }
@@ -585,24 +574,20 @@ namespace WerewolfClient
             _updateTimer.Enabled = false;
         }
 
-        private void DeadPlayer()
+        private void DeadPlayer(WerewolfModel wm)
         {
             if (_isDead)
             {
                 int i = 0;
                 foreach (Player player in wm.Players)
                 {
-                    Controls["GBPlayers"].Controls["BtnPlayer" + i].Text = player.Name;
-
-                    if (player.Name == wm.Player.Name || player.Status != Player.StatusEnum.Alive)
-                    {
-                        // FIXME, need to optimize this
-                        Image img = Properties.Resources.Icon_villager;
-                        ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
-                    }
+                    Image img = Properties.Resources.Icon_villager;
+                    ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                     i++;
                 }
             }
         }
+
+
     }
 }

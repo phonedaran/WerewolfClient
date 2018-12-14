@@ -85,7 +85,7 @@ namespace WerewolfClient
 
         private void Server_2(object sender, EventArgs e)
         {
-            button2.BackColor = Color.YellowGreen;
+            button2.BackColor = Color.DarkSalmon;
             button3.BackColor = Button.DefaultBackColor;
             button4.BackColor = Button.DefaultBackColor;
             TBServer.Text = "http://project-ile.net:2342/werewolf/";
@@ -94,7 +94,7 @@ namespace WerewolfClient
         private void Server_4(object sender, EventArgs e)
         {
             button2.BackColor = Button.DefaultBackColor;
-            button3.BackColor = Color.YellowGreen;
+            button3.BackColor = Color.DarkSalmon;
             button4.BackColor = Button.DefaultBackColor;
             TBServer.Text = "http://project-ile.net:2344/werewolf/";
         }
@@ -103,8 +103,9 @@ namespace WerewolfClient
         {
             button2.BackColor = Button.DefaultBackColor;
             button3.BackColor = Button.DefaultBackColor;
-            button4.BackColor = Color.YellowGreen;
+            button4.BackColor = Color.DarkSalmon;
             TBServer.Text = "http://project-ile.net:23416/werewolf/";
         }
+
     }
 }

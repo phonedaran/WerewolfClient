@@ -35,26 +35,13 @@ namespace WerewolfClient
             switch (HTPstate)
             {
                 case 2:
-                    this.BackgroundImage = Properties.Resources.Night_time;
+                    this.BackgroundImage = Properties.Resources.HTP2;
                     break;
                 case 3:
-                    this.BackgroundImage = Properties.Resources.Day_time;
+                    this.BackgroundImage = Properties.Resources.HTP3;
                     break;
                 case 4:
-                    this.BackgroundImage = Properties.Resources.Icon_alpha_werewolf;
-                    BtnNext.Hide();
-                    break;
-                case 5:
-                    this.BackgroundImage = Properties.Resources.Day_time;
-                    break;
-                case 6:
-                    this.BackgroundImage = Properties.Resources.Day_time;
-                    break;
-                case 7:
-                    this.BackgroundImage = Properties.Resources.Day_time;
-                    break;
-                case 8:
-                    this.BackgroundImage = Properties.Resources.Day_time;
+                    this.BackgroundImage = Properties.Resources.HTP4;
                     BtnNext.Hide();
                     break;
             }
@@ -67,26 +54,14 @@ namespace WerewolfClient
             switch (HTPstate)
             {
                 case 1:
-                    this.BackgroundImage = Properties.Resources.Icon_seer;
+                    this.BackgroundImage = Properties.Resources.HTP1;
                     BtnBack.Hide();
                     break;
                 case 2:
-                    this.BackgroundImage = Properties.Resources.Night_time;
+                    this.BackgroundImage = Properties.Resources.HTP2;
                     break;
                 case 3:
-                    this.BackgroundImage = Properties.Resources.Day_time;
-                    break;
-                case 4:
-                    this.BackgroundImage = Properties.Resources.Day_time;
-                    break;
-                case 5:
-                    this.BackgroundImage = Properties.Resources.Day_time;
-                    break;
-                case 6:
-                    this.BackgroundImage = Properties.Resources.Day_time;
-                    break;
-                case 7:
-                    this.BackgroundImage = Properties.Resources.Day_time;
+                    this.BackgroundImage = Properties.Resources.HTP3;
                     break;
             }
         }
