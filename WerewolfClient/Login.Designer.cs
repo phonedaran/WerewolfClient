@@ -160,7 +160,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "2 Player";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Server_2);
             // 
             // button3
             // 
@@ -170,7 +170,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "4 Player";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Server_4);
             // 
             // button4
             // 
@@ -180,7 +180,7 @@
             this.button4.TabIndex = 12;
             this.button4.Text = "16 Player";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Server_16);
             // 
             // Login
             // 

@@ -16,6 +16,7 @@ namespace WerewolfClient
     {
         List<Player> players = null;
         Game _gameOut = null;
+        private bool _alreadyAdd = false;
         
 
         public GameOver()
@@ -23,55 +24,87 @@ namespace WerewolfClient
             InitializeComponent();
         }
 
-        private void WinnerName(WerewolfModel wm)
+        private void WinnerName(Model m)
         {
-            foreach(Player player in wm.Players)
+            if(m is WerewolfModel)
             {
-                string role;
-                role = player.Role.Name;
+                WerewolfModel wm = (WerewolfModel)m;
 
-                //TEST
-
-                switch (_gameOut.Outcome)
+                foreach(Player player in wm.Players)
                 {
-                    case Game.OutcomeEnum.Werewolfwin:
-                        if (role == WerewolfModel.ROLE_ALPHA_WEREWOLF) richTextBox1.Text += "WW1";// player.Name;
-                        if (role == WerewolfModel.ROLE_WEREWOLF) richTextBox1.Text += "WW2";// player.Name;
-                        if (role == WerewolfModel.ROLE_WEREWOLF_SEER) richTextBox1.Text += "WW3";// player.Name;
-                        if (role == WerewolfModel.ROLE_ALPHA_WEREWOLF) richTextBox1.Text += "WW4";// player.Name;
-                        break;
-                    case Game.OutcomeEnum.Serialkillerwin:
-                        if (role == WerewolfModel.ROLE_SERIAL_KILLER) richTextBox1.Text += "SK";// player.Name;
-                        break;
-                    case Game.OutcomeEnum.Villagerwin:
-                        //BUG Villager ไม่มี
-                        if (role == WerewolfModel.ROLE_VILLAGER) richTextBox1.Text += "VL";// player.Name;
-                        if (role == WerewolfModel.ROLE_SEER) richTextBox1.Text += "SR";// player.Name;
-                        if (role == WerewolfModel.ROLE_AURA_SEER) richTextBox1.Text += "AS";// player.Name;
-                        if (role == WerewolfModel.ROLE_BODYGUARD) richTextBox1.Text += "BG";// player.Name;
-                        if (role == WerewolfModel.ROLE_DOCTOR) richTextBox1.Text += "DC";// player.Name;
-                        if (role == WerewolfModel.ROLE_GUNNER) richTextBox1.Text += "GN";// player.Name;
-                        if (role == WerewolfModel.ROLE_JAILER) richTextBox1.Text += "JL";// player.Name;
-                        if (role == WerewolfModel.ROLE_MEDIUM) richTextBox1.Text += "MD";// player.Name;
-                        if (role == WerewolfModel.ROLE_PRIEST) richTextBox1.Text += "PS";// player.Name;
-                        break;
-                    case Game.OutcomeEnum.Headhunterwin:
-                        if (role == WerewolfModel.ROLE_HEAD_HUNTER) richTextBox1.Text += player.Name;
-                        break;
-                    case Game.OutcomeEnum.Foolwin:
-                        if (role == WerewolfModel.ROLE_FOOL) richTextBox1.Text += player.Name;
-                        break;
-                    case Game.OutcomeEnum.Nowin:
-                        richTextBox1.Text += "No Winer!!!";
-                        break;
-
+                    string role;
+                    role = player.Role.Name;
+                    if (!_alreadyAdd)//TEST ยังไม่เสร็จ
+                    {
+                        switch (_gameOut.Outcome)
+                        {
+                            case Game.OutcomeEnum.Werewolfwin:
+                                if (role == WerewolfModel.ROLE_ALPHA_WEREWOLF) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_WEREWOLF) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_WEREWOLF_SEER) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_ALPHA_WEREWOLF) richTextBox1.Text += player.Name;
+                                break;
+                            case Game.OutcomeEnum.Serialkillerwin:
+                                if (role == WerewolfModel.ROLE_SERIAL_KILLER) richTextBox1.Text += player.Name;
+                                break;
+                            case Game.OutcomeEnum.Villagerwin:
+                                //Villager ไม่มี << เพิ่มแล้ว
+                                if (role == WerewolfModel.ROLE_VILLAGER) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_SEER) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_AURA_SEER) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_BODYGUARD) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_DOCTOR) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_GUNNER) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_JAILER) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_MEDIUM) richTextBox1.Text += player.Name;
+                                if (role == WerewolfModel.ROLE_PRIEST) richTextBox1.Text += player.Name;
+                                break;
+                            case Game.OutcomeEnum.Headhunterwin:
+                                if (role == WerewolfModel.ROLE_HEAD_HUNTER) richTextBox1.Text += player.Name;
+                                break;
+                            case Game.OutcomeEnum.Foolwin:
+                                if (role == WerewolfModel.ROLE_FOOL) richTextBox1.Text += player.Name;
+                                break;
+                            case Game.OutcomeEnum.Nowin:
+                                richTextBox1.Text += "No Winer!!!";
+                                break;
+                        }
+                    } _alreadyAdd = true;
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void WhoWin(Model m)
+        {
+            if(m is WerewolfModel)
+            {
+                switch (_gameOut.Outcome)
+                {
+                    case Game.OutcomeEnum.Werewolfwin:
+                        label2.Text = "Werewolf win";
+                        break;
+                    case Game.OutcomeEnum.Serialkillerwin:
+                        label2.Text = "Seriakiller win";
+                        break;
+                    case Game.OutcomeEnum.Villagerwin:
+                        label2.Text = "Villager win";
+                        break;
+                    case Game.OutcomeEnum.Headhunterwin:
+                        label2.Text = "Head Hunter win";
+                        break;
+                    case Game.OutcomeEnum.Foolwin:
+                        label2.Text = "Fool win";
+                        break;
+                    case Game.OutcomeEnum.Nowin:
+                        label2.Text = "No winner";
+                        break;
+                }
+            }
         }
     }
 }

@@ -32,7 +32,9 @@ namespace WerewolfClient
         //Add
         private bool _isEnd = false;
         private bool EmoShow = true;
+       
         private int BulletCount = 0;
+
 
         public MainForm()
         {
@@ -109,10 +111,11 @@ namespace WerewolfClient
             {
                 Controls["GBPlayers"].Controls["BtnPlayer" + i].Text = player.Name;
 
+                Image img = Properties.Resources.Icon_villager;
                 if (player.Name == wm.Player.Name || player.Status != Player.StatusEnum.Alive)
                 {
                     // FIXME, need to optimize this
-                    Image img = Properties.Resources.Icon_villager;
+                    
                     string role;
                     if (player.Name == wm.Player.Name)
                     {
@@ -176,6 +179,19 @@ namespace WerewolfClient
                     }
                     ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                 }
+                //เปลี่ยนรูปตอนตาย
+                if (player.Status == Player.StatusEnum.Votedead)
+                    img = Properties.Resources.RIP;
+                if (player.Status == Player.StatusEnum.Shotdead)
+                    img = Properties.Resources.RIP;
+                if (player.Status == Player.StatusEnum.Holydead)
+                    img = Properties.Resources.RIP;
+                if (player.Status == Player.StatusEnum.Jaildead)
+                    img = Properties.Resources.RIP;
+                if (player.Status == Player.StatusEnum.Killdead)
+                    img = Properties.Resources.RIP;
+
+                ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                 i++;
             }
         }
@@ -211,6 +227,8 @@ namespace WerewolfClient
                         break;
                     case EventEnum.GameStopped:
                         AddChatMessage("Game is finished, outcome is " + wm.EventPayloads["Game.Outcome"]);
+                        GameOver gov = new GameOver();
+                        gov.Show();
                         _updateTimer.Enabled = false;
                         break;
 
@@ -565,6 +583,26 @@ namespace WerewolfClient
                 n.Show();
             }
             _updateTimer.Enabled = false;
+        }
+
+        private void DeadPlayer()
+        {
+            if (_isDead)
+            {
+                int i = 0;
+                foreach (Player player in wm.Players)
+                {
+                    Controls["GBPlayers"].Controls["BtnPlayer" + i].Text = player.Name;
+
+                    if (player.Name == wm.Player.Name || player.Status != Player.StatusEnum.Alive)
+                    {
+                        // FIXME, need to optimize this
+                        Image img = Properties.Resources.Icon_villager;
+                        ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
+                    }
+                    i++;
+                }
+            }
         }
     }
 }

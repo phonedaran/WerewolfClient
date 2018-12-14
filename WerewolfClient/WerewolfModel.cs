@@ -405,6 +405,8 @@ namespace WerewolfClient
 
         public void Vote(string target)
         {
+
+            //BUG โหวตตาย แต่ตัวยังอยู่
             try
             {
                 if (_currentPeriod == Game.PeriodEnum.Day)

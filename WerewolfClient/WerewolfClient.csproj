@@ -132,6 +132,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\RIP.jpg" />
     <None Include="Resources\Night_time.png" />
     <None Include="Resources\Day_time.png" />
     <Content Include="Resources\Icon_alpha_werewolf.png" />
