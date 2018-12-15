@@ -155,6 +155,7 @@
     <None Include="Resources\HTP2.png" />
     <None Include="Resources\HTP1.png" />
     <None Include="Resources\Day_Time.jpg" />
+    <None Include="Resources\End.jpg" />
     <Content Include="Resources\Icon_alpha_werewolf.png" />
     <Content Include="Resources\Icon_aura_seer.png" />
     <Content Include="Resources\Icon_bodyguard.png" />

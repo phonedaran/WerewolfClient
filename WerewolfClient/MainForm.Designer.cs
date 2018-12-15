@@ -53,7 +53,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -63,6 +62,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.TbChatBox = new System.Windows.Forms.RichTextBox();
             this.TbChatInput = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.GBAction = new System.Windows.Forms.GroupBox();
             this.BtnJoin = new System.Windows.Forms.Button();
             this.BtnAction = new System.Windows.Forms.Button();
@@ -99,11 +99,11 @@
             this.GBPlayers.Controls.Add(this.BtnPlayer2);
             this.GBPlayers.Controls.Add(this.BtnPlayer1);
             this.GBPlayers.Controls.Add(this.BtnPlayer0);
-            this.GBPlayers.Location = new System.Drawing.Point(9, 117);
+            this.GBPlayers.Location = new System.Drawing.Point(12, 144);
             this.GBPlayers.Margin = new System.Windows.Forms.Padding(0);
             this.GBPlayers.Name = "GBPlayers";
             this.GBPlayers.Padding = new System.Windows.Forms.Padding(0);
-            this.GBPlayers.Size = new System.Drawing.Size(520, 567);
+            this.GBPlayers.Size = new System.Drawing.Size(693, 698);
             this.GBPlayers.TabIndex = 0;
             this.GBPlayers.TabStop = false;
             // 
@@ -114,10 +114,10 @@
             this.BtnPlayer15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer15.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer15.Location = new System.Drawing.Point(368, 391);
+            this.BtnPlayer15.Location = new System.Drawing.Point(491, 481);
             this.BtnPlayer15.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer15.Name = "BtnPlayer15";
-            this.BtnPlayer15.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer15.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer15.TabIndex = 16;
             this.BtnPlayer15.Tag = "15";
             this.BtnPlayer15.Text = "Player";
@@ -131,10 +131,10 @@
             this.BtnPlayer14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer14.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer14.Location = new System.Drawing.Point(264, 390);
+            this.BtnPlayer14.Location = new System.Drawing.Point(352, 480);
             this.BtnPlayer14.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer14.Name = "BtnPlayer14";
-            this.BtnPlayer14.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer14.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer14.TabIndex = 15;
             this.BtnPlayer14.Tag = "14";
             this.BtnPlayer14.Text = "Player";
@@ -148,10 +148,10 @@
             this.BtnPlayer13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer13.Location = new System.Drawing.Point(159, 389);
+            this.BtnPlayer13.Location = new System.Drawing.Point(212, 479);
             this.BtnPlayer13.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer13.Name = "BtnPlayer13";
-            this.BtnPlayer13.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer13.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer13.TabIndex = 14;
             this.BtnPlayer13.Tag = "13";
             this.BtnPlayer13.Text = "Player";
@@ -165,10 +165,10 @@
             this.BtnPlayer12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer12.Location = new System.Drawing.Point(57, 389);
+            this.BtnPlayer12.Location = new System.Drawing.Point(76, 479);
             this.BtnPlayer12.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer12.Name = "BtnPlayer12";
-            this.BtnPlayer12.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer12.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer12.TabIndex = 13;
             this.BtnPlayer12.Tag = "12";
             this.BtnPlayer12.Text = "Player";
@@ -182,10 +182,10 @@
             this.BtnPlayer11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer11.Location = new System.Drawing.Point(368, 278);
+            this.BtnPlayer11.Location = new System.Drawing.Point(491, 342);
             this.BtnPlayer11.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer11.Name = "BtnPlayer11";
-            this.BtnPlayer11.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer11.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer11.TabIndex = 12;
             this.BtnPlayer11.Tag = "11";
             this.BtnPlayer11.Text = "Player";
@@ -199,10 +199,10 @@
             this.BtnPlayer10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer10.Location = new System.Drawing.Point(264, 278);
+            this.BtnPlayer10.Location = new System.Drawing.Point(352, 342);
             this.BtnPlayer10.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer10.Name = "BtnPlayer10";
-            this.BtnPlayer10.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer10.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer10.TabIndex = 11;
             this.BtnPlayer10.Tag = "10";
             this.BtnPlayer10.Text = "Player";
@@ -216,10 +216,10 @@
             this.BtnPlayer9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer9.Location = new System.Drawing.Point(159, 276);
+            this.BtnPlayer9.Location = new System.Drawing.Point(212, 340);
             this.BtnPlayer9.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer9.Name = "BtnPlayer9";
-            this.BtnPlayer9.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer9.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer9.TabIndex = 10;
             this.BtnPlayer9.Tag = "9";
             this.BtnPlayer9.Text = "Player";
@@ -233,10 +233,10 @@
             this.BtnPlayer8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer8.Location = new System.Drawing.Point(57, 276);
+            this.BtnPlayer8.Location = new System.Drawing.Point(76, 340);
             this.BtnPlayer8.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer8.Name = "BtnPlayer8";
-            this.BtnPlayer8.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer8.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer8.TabIndex = 9;
             this.BtnPlayer8.Tag = "8";
             this.BtnPlayer8.Text = "Player";
@@ -250,10 +250,10 @@
             this.BtnPlayer7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer7.Location = new System.Drawing.Point(370, 162);
+            this.BtnPlayer7.Location = new System.Drawing.Point(493, 199);
             this.BtnPlayer7.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer7.Name = "BtnPlayer7";
-            this.BtnPlayer7.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer7.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer7.TabIndex = 8;
             this.BtnPlayer7.Tag = "7";
             this.BtnPlayer7.Text = "Player";
@@ -267,10 +267,10 @@
             this.BtnPlayer6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer6.Location = new System.Drawing.Point(265, 162);
+            this.BtnPlayer6.Location = new System.Drawing.Point(353, 199);
             this.BtnPlayer6.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer6.Name = "BtnPlayer6";
-            this.BtnPlayer6.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer6.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer6.TabIndex = 7;
             this.BtnPlayer6.Tag = "6";
             this.BtnPlayer6.Text = "Player";
@@ -284,10 +284,10 @@
             this.BtnPlayer5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer5.Location = new System.Drawing.Point(160, 161);
+            this.BtnPlayer5.Location = new System.Drawing.Point(213, 198);
             this.BtnPlayer5.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer5.Name = "BtnPlayer5";
-            this.BtnPlayer5.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer5.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer5.TabIndex = 6;
             this.BtnPlayer5.Tag = "5";
             this.BtnPlayer5.Text = "Player";
@@ -301,10 +301,10 @@
             this.BtnPlayer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer4.Location = new System.Drawing.Point(57, 161);
+            this.BtnPlayer4.Location = new System.Drawing.Point(76, 198);
             this.BtnPlayer4.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer4.Name = "BtnPlayer4";
-            this.BtnPlayer4.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer4.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer4.TabIndex = 5;
             this.BtnPlayer4.Tag = "4";
             this.BtnPlayer4.Text = "Player";
@@ -318,10 +318,10 @@
             this.BtnPlayer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer3.Location = new System.Drawing.Point(371, 49);
+            this.BtnPlayer3.Location = new System.Drawing.Point(495, 60);
             this.BtnPlayer3.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer3.Name = "BtnPlayer3";
-            this.BtnPlayer3.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer3.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer3.TabIndex = 4;
             this.BtnPlayer3.Tag = "3";
             this.BtnPlayer3.Text = "Player";
@@ -335,10 +335,10 @@
             this.BtnPlayer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer2.Location = new System.Drawing.Point(265, 49);
+            this.BtnPlayer2.Location = new System.Drawing.Point(353, 60);
             this.BtnPlayer2.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer2.Name = "BtnPlayer2";
-            this.BtnPlayer2.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer2.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer2.TabIndex = 3;
             this.BtnPlayer2.Tag = "2";
             this.BtnPlayer2.Text = "Player";
@@ -352,10 +352,10 @@
             this.BtnPlayer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer1.Location = new System.Drawing.Point(160, 49);
+            this.BtnPlayer1.Location = new System.Drawing.Point(213, 60);
             this.BtnPlayer1.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer1.Name = "BtnPlayer1";
-            this.BtnPlayer1.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer1.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer1.TabIndex = 2;
             this.BtnPlayer1.Tag = "1";
             this.BtnPlayer1.Text = "Player";
@@ -369,10 +369,10 @@
             this.BtnPlayer0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BtnPlayer0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.BtnPlayer0.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnPlayer0.Location = new System.Drawing.Point(55, 48);
+            this.BtnPlayer0.Location = new System.Drawing.Point(73, 59);
             this.BtnPlayer0.Margin = new System.Windows.Forms.Padding(0);
             this.BtnPlayer0.Name = "BtnPlayer0";
-            this.BtnPlayer0.Size = new System.Drawing.Size(100, 110);
+            this.BtnPlayer0.Size = new System.Drawing.Size(133, 135);
             this.BtnPlayer0.TabIndex = 1;
             this.BtnPlayer0.Tag = "0";
             this.BtnPlayer0.Text = "Player";
@@ -398,11 +398,11 @@
             this.GBChat.Controls.Add(this.button7);
             this.GBChat.Controls.Add(this.TbChatBox);
             this.GBChat.Controls.Add(this.TbChatInput);
-            this.GBChat.Location = new System.Drawing.Point(570, 165);
+            this.GBChat.Location = new System.Drawing.Point(760, 203);
             this.GBChat.Margin = new System.Windows.Forms.Padding(0);
             this.GBChat.Name = "GBChat";
             this.GBChat.Padding = new System.Windows.Forms.Padding(0);
-            this.GBChat.Size = new System.Drawing.Size(553, 550);
+            this.GBChat.Size = new System.Drawing.Size(737, 677);
             this.GBChat.TabIndex = 2;
             this.GBChat.TabStop = false;
             this.GBChat.Text = "Chat";
@@ -416,10 +416,10 @@
             this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button9.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(282, 243);
+            this.button9.Location = new System.Drawing.Point(376, 299);
             this.button9.Margin = new System.Windows.Forms.Padding(0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(100, 100);
+            this.button9.Size = new System.Drawing.Size(133, 123);
             this.button9.TabIndex = 6;
             this.button9.Text = "[:7]";
             this.button9.UseVisualStyleBackColor = false;
@@ -434,10 +434,10 @@
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button10.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(382, 248);
+            this.button10.Location = new System.Drawing.Point(509, 305);
             this.button10.Margin = new System.Windows.Forms.Padding(0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 100);
+            this.button10.Size = new System.Drawing.Size(133, 123);
             this.button10.TabIndex = 16;
             this.button10.Text = "[:8]";
             this.button10.UseVisualStyleBackColor = false;
@@ -453,10 +453,10 @@
             this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button11.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(82, 343);
+            this.button11.Location = new System.Drawing.Point(109, 422);
             this.button11.Margin = new System.Windows.Forms.Padding(0);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 100);
+            this.button11.Size = new System.Drawing.Size(133, 123);
             this.button11.TabIndex = 15;
             this.button11.Text = "[:9]";
             this.button11.UseVisualStyleBackColor = false;
@@ -472,10 +472,10 @@
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button12.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(382, 343);
+            this.button12.Location = new System.Drawing.Point(509, 422);
             this.button12.Margin = new System.Windows.Forms.Padding(0);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(100, 100);
+            this.button12.Size = new System.Drawing.Size(133, 123);
             this.button12.TabIndex = 13;
             this.button12.Text = "[:12]";
             this.button12.UseVisualStyleBackColor = false;
@@ -491,10 +491,10 @@
             this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button13.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Location = new System.Drawing.Point(282, 343);
+            this.button13.Location = new System.Drawing.Point(376, 422);
             this.button13.Margin = new System.Windows.Forms.Padding(0);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(100, 100);
+            this.button13.Size = new System.Drawing.Size(133, 123);
             this.button13.TabIndex = 17;
             this.button13.Text = "[:11]";
             this.button13.UseVisualStyleBackColor = false;
@@ -510,27 +510,15 @@
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button14.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Location = new System.Drawing.Point(182, 343);
+            this.button14.Location = new System.Drawing.Point(243, 422);
             this.button14.Margin = new System.Windows.Forms.Padding(0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(100, 100);
+            this.button14.Size = new System.Drawing.Size(133, 123);
             this.button14.TabIndex = 14;
             this.button14.Text = "[:10]";
             this.button14.UseVisualStyleBackColor = false;
             this.button14.AutoSizeChanged += new System.EventHandler(this.Emo_Click);
             this.button14.Click += new System.EventHandler(this.Emo_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(852, 11);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(80, 41);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "End(เอามาลอง เด้งหน้าจบ)";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Visible = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button1
             // 
@@ -541,10 +529,10 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(82, 148);
+            this.button1.Location = new System.Drawing.Point(109, 182);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 100);
+            this.button1.Size = new System.Drawing.Size(133, 123);
             this.button1.TabIndex = 5;
             this.button1.Text = "[:1]";
             this.button1.UseVisualStyleBackColor = false;
@@ -559,10 +547,10 @@
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(182, 148);
+            this.button5.Location = new System.Drawing.Point(243, 182);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 100);
+            this.button5.Size = new System.Drawing.Size(133, 123);
             this.button5.TabIndex = 9;
             this.button5.Text = "[:2]";
             this.button5.UseVisualStyleBackColor = false;
@@ -577,10 +565,10 @@
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(282, 148);
+            this.button4.Location = new System.Drawing.Point(376, 182);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 100);
+            this.button4.Size = new System.Drawing.Size(133, 123);
             this.button4.TabIndex = 8;
             this.button4.Text = "[:3]";
             this.button4.UseVisualStyleBackColor = false;
@@ -595,10 +583,10 @@
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button2.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(182, 245);
+            this.button2.Location = new System.Drawing.Point(243, 302);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 100);
+            this.button2.Size = new System.Drawing.Size(133, 123);
             this.button2.TabIndex = 6;
             this.button2.Text = "[:6]";
             this.button2.UseVisualStyleBackColor = false;
@@ -613,10 +601,10 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button6.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(82, 243);
+            this.button6.Location = new System.Drawing.Point(109, 299);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 100);
+            this.button6.Size = new System.Drawing.Size(133, 123);
             this.button6.TabIndex = 10;
             this.button6.Text = "[:5]";
             this.button6.UseVisualStyleBackColor = false;
@@ -631,10 +619,10 @@
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Myriad Arabic", 1.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(382, 148);
+            this.button3.Location = new System.Drawing.Point(509, 182);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 100);
+            this.button3.Size = new System.Drawing.Size(133, 123);
             this.button3.TabIndex = 7;
             this.button3.Text = "[:4]";
             this.button3.UseVisualStyleBackColor = false;
@@ -647,9 +635,10 @@
             this.button7.BackgroundImage = global::WerewolfClient.Properties.Resources.wolf_icon;
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(417, 493);
+            this.button7.Location = new System.Drawing.Point(556, 607);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 26);
+            this.button7.Size = new System.Drawing.Size(60, 32);
             this.button7.TabIndex = 11;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.Emo_hide_show);
@@ -657,14 +646,14 @@
             // TbChatBox
             // 
             this.TbChatBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TbChatBox.BackColor = System.Drawing.SystemColors.Window;
+            this.TbChatBox.BackColor = System.Drawing.Color.LightGray;
             this.TbChatBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbChatBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.TbChatBox.Location = new System.Drawing.Point(91, 23);
+            this.TbChatBox.Location = new System.Drawing.Point(121, 28);
             this.TbChatBox.Margin = new System.Windows.Forms.Padding(0);
             this.TbChatBox.Name = "TbChatBox";
             this.TbChatBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.TbChatBox.Size = new System.Drawing.Size(371, 452);
+            this.TbChatBox.Size = new System.Drawing.Size(495, 556);
             this.TbChatBox.TabIndex = 4;
             this.TbChatBox.Text = "";
             // 
@@ -673,12 +662,24 @@
             this.TbChatInput.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TbChatInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbChatInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbChatInput.Location = new System.Drawing.Point(91, 493);
+            this.TbChatInput.Location = new System.Drawing.Point(121, 607);
             this.TbChatInput.Margin = new System.Windows.Forms.Padding(0);
             this.TbChatInput.Name = "TbChatInput";
-            this.TbChatInput.Size = new System.Drawing.Size(330, 26);
+            this.TbChatInput.Size = new System.Drawing.Size(439, 30);
             this.TbChatInput.TabIndex = 1;
             this.TbChatInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbChatInput_Enter);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(1136, 14);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(107, 50);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "End(เอามาลอง เด้งหน้าจบ)";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // GBAction
             // 
@@ -686,11 +687,11 @@
             this.GBAction.Controls.Add(this.BtnJoin);
             this.GBAction.Controls.Add(this.BtnAction);
             this.GBAction.Controls.Add(this.BtnVote);
-            this.GBAction.Location = new System.Drawing.Point(570, 31);
+            this.GBAction.Location = new System.Drawing.Point(760, 76);
             this.GBAction.Margin = new System.Windows.Forms.Padding(0);
             this.GBAction.Name = "GBAction";
             this.GBAction.Padding = new System.Windows.Forms.Padding(0);
-            this.GBAction.Size = new System.Drawing.Size(264, 84);
+            this.GBAction.Size = new System.Drawing.Size(352, 103);
             this.GBAction.TabIndex = 3;
             this.GBAction.TabStop = false;
             this.GBAction.Text = "Action";
@@ -698,10 +699,10 @@
             // BtnJoin
             // 
             this.BtnJoin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnJoin.Location = new System.Drawing.Point(180, 20);
+            this.BtnJoin.Location = new System.Drawing.Point(240, 25);
             this.BtnJoin.Margin = new System.Windows.Forms.Padding(0);
             this.BtnJoin.Name = "BtnJoin";
-            this.BtnJoin.Size = new System.Drawing.Size(72, 46);
+            this.BtnJoin.Size = new System.Drawing.Size(96, 57);
             this.BtnJoin.TabIndex = 9;
             this.BtnJoin.Text = "Join Game";
             this.BtnJoin.UseVisualStyleBackColor = true;
@@ -710,10 +711,10 @@
             // BtnAction
             // 
             this.BtnAction.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnAction.Location = new System.Drawing.Point(96, 20);
+            this.BtnAction.Location = new System.Drawing.Point(128, 25);
             this.BtnAction.Margin = new System.Windows.Forms.Padding(0);
             this.BtnAction.Name = "BtnAction";
-            this.BtnAction.Size = new System.Drawing.Size(72, 46);
+            this.BtnAction.Size = new System.Drawing.Size(96, 57);
             this.BtnAction.TabIndex = 1;
             this.BtnAction.Text = "Action";
             this.BtnAction.UseVisualStyleBackColor = true;
@@ -722,10 +723,10 @@
             // BtnVote
             // 
             this.BtnVote.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnVote.Location = new System.Drawing.Point(18, 20);
+            this.BtnVote.Location = new System.Drawing.Point(24, 25);
             this.BtnVote.Margin = new System.Windows.Forms.Padding(0);
             this.BtnVote.Name = "BtnVote";
-            this.BtnVote.Size = new System.Drawing.Size(72, 46);
+            this.BtnVote.Size = new System.Drawing.Size(96, 57);
             this.BtnVote.TabIndex = 0;
             this.BtnVote.Text = "Vote";
             this.BtnVote.UseVisualStyleBackColor = true;
@@ -739,11 +740,11 @@
             this.GBStatus.Controls.Add(this.LBPeriod);
             this.GBStatus.Controls.Add(this.label2);
             this.GBStatus.Controls.Add(this.label1);
-            this.GBStatus.Location = new System.Drawing.Point(938, 31);
+            this.GBStatus.Location = new System.Drawing.Point(1251, 76);
             this.GBStatus.Margin = new System.Windows.Forms.Padding(0);
             this.GBStatus.Name = "GBStatus";
             this.GBStatus.Padding = new System.Windows.Forms.Padding(0);
-            this.GBStatus.Size = new System.Drawing.Size(114, 84);
+            this.GBStatus.Size = new System.Drawing.Size(152, 103);
             this.GBStatus.TabIndex = 8;
             this.GBStatus.TabStop = false;
             this.GBStatus.Text = "Status";
@@ -752,10 +753,10 @@
             // 
             this.LBTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LBTime.AutoSize = true;
-            this.LBTime.Location = new System.Drawing.Point(42, 52);
+            this.LBTime.Location = new System.Drawing.Point(56, 64);
             this.LBTime.Margin = new System.Windows.Forms.Padding(0);
             this.LBTime.Name = "LBTime";
-            this.LBTime.Size = new System.Drawing.Size(13, 13);
+            this.LBTime.Size = new System.Drawing.Size(16, 17);
             this.LBTime.TabIndex = 12;
             this.LBTime.Text = "0";
             // 
@@ -763,10 +764,10 @@
             // 
             this.LBDay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LBDay.AutoSize = true;
-            this.LBDay.Location = new System.Drawing.Point(42, 32);
+            this.LBDay.Location = new System.Drawing.Point(56, 47);
             this.LBDay.Margin = new System.Windows.Forms.Padding(0);
             this.LBDay.Name = "LBDay";
-            this.LBDay.Size = new System.Drawing.Size(13, 13);
+            this.LBDay.Size = new System.Drawing.Size(16, 17);
             this.LBDay.TabIndex = 11;
             this.LBDay.Text = "0";
             // 
@@ -774,10 +775,10 @@
             // 
             this.LBPeriod.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LBPeriod.AutoSize = true;
-            this.LBPeriod.Location = new System.Drawing.Point(6, 20);
+            this.LBPeriod.Location = new System.Drawing.Point(8, 25);
             this.LBPeriod.Margin = new System.Windows.Forms.Padding(0);
             this.LBPeriod.Name = "LBPeriod";
-            this.LBPeriod.Size = new System.Drawing.Size(44, 13);
+            this.LBPeriod.Size = new System.Drawing.Size(57, 17);
             this.LBPeriod.TabIndex = 10;
             this.LBPeriod.Text = "Night of";
             // 
@@ -785,10 +786,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 52);
+            this.label2.Location = new System.Drawing.Point(8, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(39, 17);
             this.label2.TabIndex = 9;
             this.label2.Text = "Time";
             // 
@@ -796,21 +797,21 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 39);
+            this.label1.Location = new System.Drawing.Point(8, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Day #";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::WerewolfClient.Properties.Resources.Day_Time;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1184, 761);
+            this.ClientSize = new System.Drawing.Size(1579, 937);
             this.Controls.Add(this.GBStatus);
             this.Controls.Add(this.GBAction);
             this.Controls.Add(this.GBChat);

@@ -31,15 +31,13 @@ namespace WerewolfClient
         public List<Player> players = null;
         //Add
         private bool _isEnd = false;
-        private bool EmoShow = true;
-       
+        private bool EmoShow;
         private int BulletCount = 0;
 
 
         public MainForm()
         {
             InitializeComponent();
-
             Emo_hide();
             foreach (int i in Enumerable.Range(0, 16))
             {
@@ -55,6 +53,45 @@ namespace WerewolfClient
             EnableButton(BtnVote, false);
             _myRole = null;
             _isDead = false;
+            EmoShow = true;
+        }
+
+        private void HowManyPeople(WerewolfModel wm)
+        {
+
+            if(wm.Event == EventEnum.JoinGame)
+            {
+              /*  playerIngameCount;
+                int i = 0;
+                string[] playerIngame = new string[16];
+                foreach(Player player in wm.Players)
+                {
+                    if(playerIngame.Length == 0)
+                    {
+                            playerIngame[i] = player.Name;
+                    }
+                    else
+                    {
+                        bool checkSame = false;
+                        for(int j = 0; j < i; j++){
+                            if (playerIngame[j] == player.Name)
+                            {
+                                checkSame = true;
+                            }
+                            if (checkSame)
+                            {
+                                playerIngame[i] = player.Name;
+                            }
+                            else
+                            {
+                                return;
+                            }
+                        }
+                    }
+                    i++;
+                }
+                label3.Text = playerIngame.Length.ToString() + "/16";*/
+            }
         }
 
         Hashtable emotions;
@@ -183,10 +220,9 @@ namespace WerewolfClient
                             img = Properties.Resources.Icon_gunner;
                             break;
                     }
-                    ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
+                    ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).BackgroundImage = img;
                 }
                 //เปลี่ยนรูปตอนตาย
-                
                 if (player.Status == Player.StatusEnum.Votedead)
                     img = Properties.Resources.RIP2;
                 if (player.Status == Player.StatusEnum.Shotdead)
@@ -198,7 +234,7 @@ namespace WerewolfClient
                 if (player.Status == Player.StatusEnum.Killdead)
                     img = Properties.Resources.RIP2;
                     
-                ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
+                ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).BackgroundImage = img;
                 i++;
             }
         }
@@ -209,7 +245,6 @@ namespace WerewolfClient
         {
             CreateEmotions();
             AddEmotions();
-
             if (m is WerewolfModel)
             {
                 WerewolfModel wm = (WerewolfModel)m;
@@ -236,6 +271,7 @@ namespace WerewolfClient
                         AddChatMessage("Game is finished, outcome is " + wm.EventPayloads["Game.Outcome"]);
                         GameOver gov = new GameOver();
                         gov.Show();
+                        
                         _updateTimer.Enabled = false;
                         break;
 
@@ -576,18 +612,36 @@ namespace WerewolfClient
 
         private void DeadPlayer(WerewolfModel wm)
         {
-            if (_isDead)
+            
+
+            int i = 0;
+            foreach (Player player in wm.Players)
             {
-                int i = 0;
-                foreach (Player player in wm.Players)
+                if (player.Status == Player.StatusEnum.Votedead)
                 {
-                    Image img = Properties.Resources.Icon_villager;
+                    Image img = Properties.Resources.RIP2;
                     ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
-                    i++;
+                }
+                if (player.Status == Player.StatusEnum.Killdead)
+                {
+                    Image img = Properties.Resources.RIP2;
+                    ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
+                }
+                if (player.Status == Player.StatusEnum.Holydead)
+                {
+                    Image img = Properties.Resources.RIP2;
+                    ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
+                }
+                if (player.Status == Player.StatusEnum.Shotdead)
+                {
+                    Image img = Properties.Resources.RIP2;
+                    ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
                 }
             }
+            i++;
         }
 
-
     }
+
+
 }
